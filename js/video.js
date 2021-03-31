@@ -44,6 +44,7 @@ document.querySelector("#play").addEventListener("click", function() {
 	console.log(this.value)
 	var slider = this.value;
 	video.volume = slider /100;
+	document.querySelector("#volume").innerHTML= this.value + "%"
 
  });
  document.getElementById('mute').addEventListener("click", function() {
