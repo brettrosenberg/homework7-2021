@@ -62,12 +62,16 @@ document.querySelector("#play").addEventListener("click", function() {
  });
 
  document.querySelector("#skip").addEventListener("click", function() {
-	console.log("Skip Ahead");
-	console.log(video.currentTime);
-	video.currentTime += 15
-	video.loop = true
-	
-	
+	if(video.currentTime > 60) {
+		console.log("Start time: " + video.curretnTime);
+		console.log("Start");
+		video.currentTime = 0;
+		console.log("new time: " + video.currentTime);
+	}
+	else {
+		console.log("Start time: " + video.currentTime)
+		video.currentTime += 15
+		console.log("new time: " + video.currentTime);
+	}
  });
- 
  
